@@ -344,35 +344,61 @@ terrain et des personnels expérimentés et motivés.
           <a class="cta-btn" style="cursor: pointer;" onclick="Show()">Demander un service</a>
         </div>
 
-        <form id="formD">
-          <img src="assets/img/WhatsApp_Image_2023-05-29_à_12.35.071-removebg-preview2.png"/>
-          <h4>~ DEMANDE DE SERVICE ~</h4>
-          <input type="text" name="nom" id="name" placeholder="Nom (personnel ou entreprise)" required>
-          <input type="email" name="email" id="email" placeholder="Email" required>
-          <input type="text" name="téléphone" id="phone" placeholder="Téléphone" required>
-          <h6>Quel(s) service(s) désirez-vous ?</h6>
+        <form id="formD" class="p-4 p-md-5 shadow-lg bg-white rounded needs-validation" novalidate>
+  <div class="text-center mb-4">
+    <img src="assets/img/WhatsApp_Image_2023-05-29_à_12.35.071-removebg-preview2.png" alt="Logo ABS" class="img-fluid mb-3" style="max-height: 80px;" />
+    <h4 class="text-uppercase fw-bold">Demande de Service</h4>
+    <p class="text-muted small">Remplissez les champs ci-dessous pour être recontacté rapidement.</p>
+  </div>
 
-          <label> Service 1
-          <select  required>
-                  <option value="" label="Service..." selected hidden></option>
-                  <option>DÉDIÉ AU SECTEUR INDUSTRIEL</option>
-                  <option>DÉDIÉ AU SECTEUR TERTIAIRE</option>
-                  <option>DÉDIÉ A L'INTERNATIONNAL</option>
-                </select></label>
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control rounded-pill px-4" name="nom" id="name" placeholder="Nom (personnel ou entreprise)" required>
+    <label for="name" class="ps-4">Nom (personnel ou entreprise)</label>
+  </div>
 
-          <label> Service 2
-          <select  required>
-                  <option value="" label="Service..." selected hidden></option>
-                  <option>DÉDIÉ AU SECTEUR INDUSTRIEL</option>
-                  <option>DÉDIÉ AU SECTEUR TERTIAIRE</option>
-                  <option>DÉDIÉ A L'INTERNATIONNAL</option>
-                </select></label>
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control rounded-pill px-4" name="email" id="email" placeholder="Email" required>
+    <label for="email" class="ps-4">Email</label>
+  </div>
 
-                <h6>Dites-nous en quelques lignes ce dont vous avez besoin.</h6>
-          <textarea placeholder="Commentaires..."></textarea>
+  <div class="form-floating mb-3">
+    <input type="tel" class="form-control rounded-pill px-4" name="téléphone" id="phone" placeholder="Téléphone" required>
+    <label for="phone" class="ps-4">Téléphone</label>
+  </div>
 
-        </br><button type="submit" class="env">Envoyer</button> <button class="fer" onclick="Close()">Fermer</button>
-        </form>
+  <h6 class="text-uppercase fw-bold text-dark mt-4 mb-3">Quel(s) service(s) désirez-vous ?</h6>
+
+  <div class="mb-3">
+    <label for="service1" class="form-label fw-bold small text-muted">Service 1</label>
+    <select id="service1" class="form-select rounded-pill px-4" required>
+      <option value="" selected hidden>Choisissez un service...</option>
+      <option>DÉDIÉ AU SECTEUR INDUSTRIEL</option>
+      <option>DÉDIÉ AU SECTEUR TERTIAIRE</option>
+      <option>DÉDIÉ A L'INTERNATIONAL</option>
+    </select>
+  </div>
+
+  <div class="mb-4">
+    <label for="service2" class="form-label fw-bold small text-muted">Service 2 (Optionnel)</label>
+    <select id="service2" class="form-select rounded-pill px-4">
+      <option value="" selected hidden>Choisissez un service...</option>
+      <option>DÉDIÉ AU SECTEUR INDUSTRIEL</option>
+      <option>DÉDIÉ AU SECTEUR TERTIAIRE</option>
+      <option>DÉDIÉ A L'INTERNATIONAL</option>
+    </select>
+  </div>
+
+  <h6 class="text-uppercase fw-bold text-dark mb-2">Dites-nous en quelques lignes ce dont vous avez besoin.</h6>
+  <div class="form-floating mb-4">
+    <textarea class="form-control rounded-3 p-3" placeholder="Commentaires..." id="commentaires" style="height: 150px;"></textarea>
+    <label for="commentaires">Commentaires / Description du projet...</label>
+  </div>
+
+  <div class="d-flex justify-content-center gap-3">
+    <button type="submit" class="env btn rounded-pill px-5 py-2 fw-bold text-uppercase">Envoyer</button>
+    <button type="button" class="fer btn rounded-pill px-5 py-2 fw-bold text-uppercase" onclick="Close()">Fermer</button>
+  </div>
+</form>
 
 
 
