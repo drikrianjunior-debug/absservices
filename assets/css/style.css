@@ -1451,26 +1451,140 @@ section {
     margin: -20px 0 30px 0;
   }
 }
-#formD{border: 2px solid red; width: 70%; height: 40%; background: rgb(255, 255, 255, 1); margin: 2% auto; padding-top: 2%; padding-right: 4%;
-padding-left: 4%; padding-bottom: 2%; text-align: center; border-radius: 10px; animation-name: formd; animation-delay: 0s; animation-duration: 1s; 
-position: relative; display: none;}
-@keyframes formd{
-  from{opacity: 0; margin: 100% auto; }
-  to{opacity: 1; margin: 0 auto;}
+#formD {
+  border: 2px solid red;
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  margin: 3vh auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  animation: formd 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+  display: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
-#formD img{width: 30%; margin-bottom: 4%}
-#formD input{width: 70%; margin-top: 2%; text-align: center; background: rgb(255, 255, 255, 0.95); border-radius: 50px; border: 2px solid black;}
-#formD textarea{width: 70%; margin-top: 2%; text-align: left; background: rgb(255, 255, 255, 0.95); border-radius: 5px; border: 2px solid black; 
-height: 300px}
-#formD .env{margin-top: 2%; width: 30%; height: 7%; border-radius: 50px; background: blue; color: white; font-weight: bold; border: 1px solid transparent;
-transition: 1s}
-#formD .fer{margin-top: 2%; width: 30%; height: 7%; border-radius: 50px; background: red; color: white; font-weight: bold; border: 1px solid transparent;
-transition: 1s}
-#formD h4{text-transform: uppercase; text-align: center; color: black; font-weight: bold;}
-#formD h6{text-transform: uppercase; text-align: left; color: black; font-weight: bold; margin-top: 7%; padding-left: 15%}
-#formD label{font-weight: bold;}
-#formD select{width: 500px; margin-top: 2%; text-align: center; background: rgb(255, 255, 255, 0.95); border-radius: 50px; border: 2px solid black;
-cursor: pointer;}
-#formD .fer:hover{background: white; color: red; border: 1px solid red;}
-#formD .env:hover{background: white; color: blue; border: 1px solid blue;}
-#formD option{color: black; font-weight: bold;}
+
+@keyframes formd {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#formD img {
+  width: 35%;
+  max-width: 120px;
+  margin-bottom: 20px;
+}
+
+#formD input,
+#formD select,
+#formD textarea {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  border: 2px solid #222;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#formD select {
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+}
+
+#formD textarea {
+  border-radius: 12px;
+  height: 130px;
+  resize: vertical;
+  text-align: left;
+}
+
+#formD input:focus,
+#formD select:focus,
+#formD textarea:focus {
+  border-color: blue;
+  box-shadow: 0 0 0 4px rgba(0, 0, 255, 0.1);
+}
+
+#formD h4 {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#formD h6 {
+  text-transform: uppercase;
+  text-align: left;
+  color: #000;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+#formD label {
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#formD .env,
+#formD .fer {
+  margin-top: 20px;
+  width: 45%;
+  max-width: 180px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+#formD .env {
+  background: blue;
+  color: white;
+  border-color: blue;
+}
+
+#formD .env:hover {
+  background: white;
+  color: blue;
+}
+
+#formD .fer {
+  background: red;
+  color: white;
+  border-color: red;
+}
+
+#formD .fer:hover {
+  background: white;
+  color: red;
+}
+
+#formD option {
+  color: #000;
+  font-weight: bold;
+}
